@@ -31,11 +31,4 @@ jobs:
         run: npm ci
 
       - name: Run Stylelint
-        run: npx stylelint "wp-content/plugins/hello-world-plugin/**/*.css"
-
-      - name: Upload Stylelint results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: stylelint-results
-          path: stylelint-results.json
+        run: npx stylelint "wp-content/plugins/hello-world-plugin/*.css" --config .stylelint.js
