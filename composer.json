@@ -1,0 +1,20 @@
+{
+    "name": "linter/public",
+    "description": "Test for WordPress linter configuration",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mau Velicaria",
+            "email": "mauvelicaria@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.11",
+        "wp-coding-standards/wpcs": "^3.1"
+    }
+}
