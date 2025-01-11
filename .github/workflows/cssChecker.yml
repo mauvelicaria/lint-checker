@@ -6,11 +6,11 @@ on:
   pull_request:
     branches: [master, dev]
     paths:
-      - '**/*.css',
-      - '**/*.scss',
-      - '.stylint.js',
-      - 'package.json',
-      - '.github/workflows/cssChecker.yml'
+    - '**/*.css',
+    - '**/*.scss',
+    - '.stylint.js',
+    - 'package.json',
+    - '.github/workflows/cssChecker.yml'
 
 jobs:
   lint:
