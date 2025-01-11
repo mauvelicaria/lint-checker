@@ -4,6 +4,8 @@
  * Description: A simple WordPress plugin that displays a Hello World message.
  * Version: 1.0
  * Author: Your Name
+ *
+ * @package HelloWorldPlugin
  */
 
 /** Enqueue scripts and styles */
