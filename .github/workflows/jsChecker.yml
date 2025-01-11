@@ -1,20 +1,13 @@
-name: Stylelint Check
+name: ESLint Check
 
 on:
   push:
     branches: [master, dev]
   pull_request:
     branches: [master, dev]
-    paths:
-      - "**/*.css"
-      - "**/*.scss"
-      - ".stylelint.js"
-      - "package.json"
-      - ".github/workflows/cssChecker.yml"
 
 jobs:
   lint:
-    name: Run Stylelint
     runs-on: ubuntu-latest
 
     steps:
@@ -25,10 +18,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: "npm"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run Stylelint
-        run: npx stylelint "wp-content/plugins/hello-world-plugin/*.css" --config .stylelint.js
+      - name: Run ESLint
+        run: npx eslint wp-content/plugins/hello-world-plugin/*.{js,ts}
