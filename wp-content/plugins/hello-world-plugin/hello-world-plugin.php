@@ -1,12 +1,12 @@
 <?php
-/*
-Plugin Name: Hello World Plugin
-Description: A simple WordPress plugin that displays a Hello World message.
-Version: 1.0
-Author: Your Name
-*/
+/**
+ * Plugin Name: Hello World Plugin
+ * Description: A simple WordPress plugin that displays a Hello World message.
+ * Version: 1.0
+ * Author: Your Name
+ */
 
-// Enqueue scripts and styles
+/** Enqueue scripts and styles */
 function hello_world_enqueue_assets() {
 	wp_enqueue_script(
 		'hello-world-plugin-js',
