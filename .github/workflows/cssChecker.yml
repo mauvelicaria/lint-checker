@@ -8,9 +8,9 @@ on:
     paths:
       - "**/*.css"
       - "**/*.scss"
-      - ".stylelintrc.js"
+      - ".stylelint.js"
       - "package.json"
-      - ".github/workflows/stylelint.yml"
+      - ".github/workflows/cssChecker.yml"
 
 jobs:
   lint:
