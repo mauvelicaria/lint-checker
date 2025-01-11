@@ -1,0 +1,36 @@
+name: CSS Lint Checker
+
+on:
+  push:
+    branches: [master, dev]
+  pull_request:
+    branches: [master, dev]
+    paths:
+      - '**/*.css',
+      - '**/*.scss',
+      - '.stylint.js',
+      - 'package.json',
+      - '.github/workflows/cssChecker.yml'
+
+jobs:
+  lint:
+    name: Run Stylelint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Stylelint
+        run: npx stylelint "wp-content/plugins/hello-world-plugin/*.css" --custom-formatter=node_modules/stylelint-formatter-github
+
+    
