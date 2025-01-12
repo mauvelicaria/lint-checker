@@ -31,4 +31,4 @@ jobs:
         run: npm install
 
       - name: Run Stylelint
-        run: npx stylelint "wp-content/plugins/hello-world-plugin/*.css" --config .stylelint.js
+        run: npx stylelint "wp-content/plugins/hello-world-plugin/*.css" --config .stylelint.mjs
