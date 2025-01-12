@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ["@wordpress/stylelint-config"],
   rules: {
     // Add custom rules here

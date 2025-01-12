@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:css": "npx stylelint wp-content/plugins/hello-world-plugin/*.css --config .stylelint.js",
+    "lint:css": "npx stylelint wp-content/plugins/hello-world-plugin/*.css --config .stylelint.mjs",
     "lint:php": "phpcs",
     "lint:fix-php": "phpcbf"
   },

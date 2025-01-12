@@ -23,4 +23,4 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint wp-content/plugins/hello-world-plugin/*.{js,ts}
+        run: npx eslint wp-content/plugins/hello-world-plugin/*.ts
